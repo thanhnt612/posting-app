@@ -1,0 +1,131 @@
+.post {
+  min-height: 1080px;
+  iframe {
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .container {
+    .title-page {
+      h3 {
+        margin: 0;
+        @include responsive("sm") {
+          font-size: 30px !important;
+        }
+        @include responsive("md") {
+          font-size: 35px !important;
+        }
+      }
+    }
+    .main {
+      .create {
+        .form-outline {
+          .create-posting {
+            form {
+              .title {
+                @include responsive("sm") {
+                  font-size: 14px !important;
+                }
+                @include responsive("md") {
+                  font-size: 16px !important;
+                }
+                @include responsive("lg") {
+                  font-size: 18px !important;
+                }
+              }
+              .description {
+                @extend .title;
+              }
+              .button1 {
+                @extend .title;
+                .btn {
+                  font-size: 16px;
+                  border: 1px solid blue;
+                  color: #000;
+                  background: #fff;
+                  text-align: center;
+                  position: relative;
+                  transition: all 0.7s;
+                  &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: blue;
+                    transition: all 0.7s;
+                  }
+                  &:hover {
+                    color: #fff;
+                    &::after {
+                      width: 100%;
+                    }
+                  }
+                  span {
+                    position: relative;
+                    z-index: 2;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .content {
+        .card-item {
+          .card {
+            img {
+            }
+            .card-body {
+              .left {
+                white-space: nowrap;
+                h5 {
+                  @include responsive("sm") {
+                    font-size: 16px !important;
+                  }
+                  @include responsive("md") {
+                    font-size: 18px !important;
+                  }
+                  @include responsive("lg") {
+                    font-size: 20px !important;
+                  }
+                }
+                p {
+                  @include responsive("sm") {
+                    font-size: 14px !important;
+                  }
+                  @include responsive("md") {
+                    font-size: 16px !important;
+                  }
+                  @include responsive("lg") {
+                    font-size: 18px !important;
+                  }
+                }
+              }
+              .right {
+                span {
+                  @include responsive("sm") {
+                    font-size: 14px !important;
+                  }
+                  @include responsive("md") {
+                    font-size: 16px !important;
+                  }
+                  @include responsive("lg") {
+                    font-size: 18px !important;
+                  }
+                }
+              }
+            }
+            .edit {
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.post-mobile {
+  min-height: 768px;
+  background: url(../../img/mobile.jpg) center center / cover no-repeat;
+  iframe {
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .container {
+    .title-page {
+      h3 {
+        margin: 0;
+        @include responsive("xxs") {
+          font-size: 25px !important;
+        }
+        @include responsive("xs") {
+          font-size: 30px !important;
+        }
+      }
+    }
+    .main {
+      .create {
+        .form-outline {
+          .create-posting {
+            form {
+              .title {
+                @include responsive("xxs") {
+                  font-size: 12px;
+                }
+                @include responsive("xs") {
+                  font-size: 14px;
+                }
+              }
+              .description {
+                @extend .title;
+              }
+              .btn {
+                @include responsive("xxs") {
+                  font-size: 12px;
+                }
+                @include responsive("xs") {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .content {
+        .card-item {
+          .card {
+            img {
+            }
+            .card-body {
+              .left {
+                h5 {
+                  @include responsive("xxs") {
+                    font-size: 14px;
+                  }
+                  @include responsive("xs") {
+                    font-size: 16px;
+                  }
+                }
+                p {
+                  @include responsive("xxs") {
+                    font-size: 12px;
+                  }
+                  @include responsive("xs") {
+                    font-size: 14px;
+                  }
+                }
+              }
+              .right {
+                span {
+                  @include responsive("xxs") {
+                    font-size: 15px;
+                  }
+                  @include responsive("xs") {
+                    font-size: 17px;
+                  }
+                }
+              }
+            }
+            .edit {
+            }
+          }
+        }
+      }
+    }
+  }
+}
